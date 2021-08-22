@@ -1,5 +1,5 @@
-# Learn ReactJS
-This repository is a documentation of me learning ReactJS.
+# Section 4
+React state & working with events
 
 ## Tech
 * ReactJS
