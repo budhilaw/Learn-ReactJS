@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import {Box, Spacer, Center, Button} from "@chakra-ui/react";
 import ExpenseDate from "./ExpenseDate";
-import Card from "./Card";
+import Card from "../UI/Card";
 
 const ExpenseItem = (props) => {
     const [title, setTitle] = useState(props.title);
@@ -33,7 +33,7 @@ const ExpenseItem = (props) => {
                 colorScheme={"teal"}
                 size="md"
                 onClick={clickHandler}
-                my={7}>
+                m={7}>
                 Change Title
             </Button>
         </Card>

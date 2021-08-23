@@ -1,6 +1,7 @@
 import './App.css';
 import {Container} from "@chakra-ui/react";
-import Expenses from "./components/Expenses";
+import Expenses from "./components/Expenses/Expenses";
+import NewExpense from "./components/NewExpense/NewExpense";
 
 const App = () => {
     const expenses = [
@@ -9,10 +10,20 @@ const App = () => {
         { id: 3, title: "Keychron K6", amount: 2000000, date: new Date(2021, 6, 10) }
     ];
 
+    const addExpenseHandler = expense => {
+        console.log('in App.js')
+        console.log(expense)
+    }
+
     return (
-        <Container my={10}>
-            <Expenses items={expenses} />
-        </Container>
+        <div>
+            <Container my={10} maxW={"container.md"}>
+                <NewExpense onAddExpense={addExpenseHandler} />
+            </Container>
+            <Container my={10} maxW={"container.xl"}>
+                <Expenses items={expenses} />
+            </Container>
+        </div>
     );
 }
 
